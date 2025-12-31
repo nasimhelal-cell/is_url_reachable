@@ -1,6 +1,8 @@
 // server.js
+require("dotenv").config();
 const express = require("express");
 const cors = require("cors");
+const PORT = process.env.PORT ;
 
 const app = express();
 
@@ -30,6 +32,6 @@ app.post("/check-url", async (req, res) => {
   }
 });
 
-app.listen(5000, () => {
-  console.log("Server running locally on http://localhost:5000");
+app.listen(PORT, () => {
+  console.log("Server running locally on http://localhost:"+PORT);
 });
