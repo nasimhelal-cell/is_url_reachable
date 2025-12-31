@@ -7,6 +7,13 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+app.get('/',async(req,res)=>{
+  return res.json({
+    success:"OK",
+    description:"I am from home route"
+  })
+})
+
 app.post("/check-url", async (req, res) => {
   const { url } = req.body;
   try {
