@@ -13,6 +13,12 @@ app.get('/',async(req,res)=>{
     description:"I am from home route"
   })
 })
+app.get('/health',async(req,res)=>{
+  return res.json({
+    success:"OK",
+    description:"My health is okay. I am ready to play something beautiful"
+  })
+})
 
 app.post("/check-url", async (req, res) => {
   const { url } = req.body;
