@@ -9,7 +9,7 @@ app.use(express.json());
 
 app.get('/',async(req,res)=>{
   return res.json({
-    success:"OK",
+    success:"OK THIS IS NEW MESSAGE",
     description:"I am from home route"
   })
 })
